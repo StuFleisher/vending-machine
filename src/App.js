@@ -7,6 +7,16 @@ import {Navigate} from "react-router-dom"
 
 const initialSnacks = [{name:"Fritos"},{name:"Lays"}, {name:"Soda"}];
 
+
+/**Main component, routes for vending machine app
+ *
+ * Props: None
+ *
+ *State : None
+ *
+ *App --> {VendingMachine, Snack}
+*/
+
 function App() {
   return (
     <div className="App">
