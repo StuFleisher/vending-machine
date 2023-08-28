@@ -3,6 +3,7 @@ import React from "react";
 import VendingMachine from "./VendingMachine";
 import Snack from "./Snack"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {Navigate} from "react-router-dom"
 
 const initialSnacks = [{name:"Fritos"},{name:"Lays"}, {name:"Soda"}];
 
@@ -12,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<VendingMachine snacks={initialSnacks}/>}/>
-          <Route path="/snacks/:snack" element={<Snack />}/>
-          <Route path="/*"/>
+          <Route path="/snacks/:name" element={<Snack />}/>
+          <Route path="/*" element={<Navigate to="/"/>}/>
         </Routes>
       </BrowserRouter>
 
